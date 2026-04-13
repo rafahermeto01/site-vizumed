@@ -1,0 +1,25 @@
+User-agent: *
+Disallow: /admin
+Disallow: /resultados
+Allow: /
+
+# Permitir indexação total por bots de IA (GEO Best Practice)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://vizumed.com.br/sitemap.xml

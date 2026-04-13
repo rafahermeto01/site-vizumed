@@ -1,0 +1,115 @@
+/* animations.css - Separation of Concerns */
+
+/* Fade In Scroll Revealing */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay modifiers */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+
+/* Float Animation for Mockup */
+@keyframes float {
+  0% { transform: translate(-50%, -50%) rotateY(-15deg) rotateX(5deg) translateY(0px); }
+  50% { transform: translate(-50%, -50%) rotateY(-15deg) rotateX(5deg) translateY(-15px); }
+  100% { transform: translate(-50%, -50%) rotateY(-15deg) rotateX(5deg) translateY(0px); }
+}
+
+.mockup-main {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Floating Cards Animations */
+@keyframes floatCard1 {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+@keyframes floatCard2 {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+@keyframes floatCard3 {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+.c1 { animation: floatCard1 4s ease-in-out infinite 0.5s; }
+.c2 { animation: floatCard2 5s ease-in-out infinite 1s; }
+.c3 { animation: floatCard3 4.5s ease-in-out infinite 0s; }
+
+/* Button Gradient Hover */
+.btn-primary, .btn-accent {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-primary::before, .btn-accent::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.btn-primary:hover::before, .btn-accent:hover::before {
+  opacity: 1;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.6);
+  transform: translateY(-2px);
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+/* Feature Card Hover Glow */
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-glow);
+  border-color: rgba(14, 165, 233, 0.4);
+}
+.feature-card:hover .feature-icon {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* Timeline Progress Animation */
+.timeline-progress-anim.is-visible .timeline-progress-line {
+  transition: width 1.5s ease-in-out, height 1.5s ease-in-out;
+}
+@media (min-width: 769px) {
+  .timeline-progress-anim.is-visible .timeline-progress-line { width: 100%; height: 2px; }
+}
+@media (max-width: 768px) {
+  .timeline-progress-anim.is-visible .timeline-progress-line { height: 100%; width: 2px; }
+}
+
+/* Timeline steps */
+.step-number {
+  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+.timeline-step.active .step-number {
+  background-color: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+}

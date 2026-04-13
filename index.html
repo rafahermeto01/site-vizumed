@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Básico -->
+  <title>VizuMed | Plataforma de Entrega Digital de Exames Médicos</title>
+  <meta name="description" content="VizuMed é o sistema SaaS que digitaliza a entrega de laudos, imagens e vídeos de exames médicos. Envio automático por WhatsApp e e-mail, portal do paciente e assinatura digital de laudos.">
+  <meta name="keywords" content="sistema de exames médicos, entrega digital de laudos, portal do paciente, laudo médico online, gestão de exames de imagem, software para clínicas, WhatsApp médico, vizumed">
+  <link rel="canonical" href="https://vizumed.com.br/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VizuMed | Plataforma de Entrega Digital de Exames Médicos">
+  <meta property="og:description" content="Digitalize a entrega de laudos e exames da sua clínica. Envio automático por WhatsApp, portal exclusivo para pacientes e médicos solicitantes.">
+  <meta property="og:url" content="https://vizumed.com.br/">
+  <meta property="og:image" content="https://vizumed.com.br/assets/og-image.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="VizuMed">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VizuMed | Plataforma de Exames Médicos Digital">
+  <meta name="twitter:description" content="Entrega de laudos 100% digital via WhatsApp e e-mail. Portal para pacientes e médicos.">
+
+  <!-- Schema.org JSON-LD (GEO + SEO estruturado) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "VizuMed",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "url": "https://vizumed.com.br",
+        "description": "Plataforma SaaS para gestão e entrega digital de exames médicos de imagem, laudos com assinatura digital e portal para pacientes.",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "BRL",
+          "availability": "https://schema.org/InStock"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "VizuMed",
+          "url": "https://vizumed.com.br",
+          "email": "contato@vizumed.com.br",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Belo Horizonte",
+            "addressRegion": "MG",
+            "addressCountry": "BR"
+          }
+        }
+      },
+      {
+        "@type": "Organization",
+        "name": "VizuMed",
+        "url": "https://vizumed.com.br",
+        "logo": "https://vizumed.com.br/assets/logo.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "contato@vizumed.com.br"
+        },
+        "sameAs": []
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "O que é a VizuMed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A VizuMed é uma plataforma SaaS que digitaliza a entrega de laudos, imagens e vídeos de exames médicos. Clínicas e hospitais usam o sistema para enviar resultados automaticamente por WhatsApp e e-mail, eliminar impressões físicas e oferecer um portal exclusivo para pacientes e médicos solicitantes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como funciona o envio de exames pela VizuMed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Após o registro do exame no sistema, a VizuMed envia automaticamente um link de acesso ao paciente via WhatsApp e e-mail. O paciente acessa o portal com login próprio e visualiza laudos, imagens e vídeos com total segurança."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "A VizuMed funciona para quais tipos de clínicas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A VizuMed é ideal para clínicas de diagnóstico por imagem, centros de ultrassonografia, clínicas de endoscopia, cardiologia e qualquer instituição que realize exames com laudo e necessite de entrega digital aos pacientes."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Preload Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/animations.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" aria-label="Navegação Principal">
+    <div class="container nav-container">
+      <a href="/" class="nav-logo">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+        </svg>
+        VizuMed
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="#funcionalidades">Funcionalidades</a></li>
+        <li><a href="#como-funciona">Como Funciona</a></li>
+        <li><a href="#comparativo">Para Clínicas</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#demo" class="btn btn-accent">Agendar Demo</a></li>
+      </ul>
+
+      <button class="hamburger" aria-label="Abrir menu">
+        ☰
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero container" id="hero">
+    <div class="hero-bg-gradient"></div>
+    <div class="hero-content reveal-on-scroll">
+      <span class="hero-tag">Plataforma SaaS para Saúde · Belo Horizonte, MG</span>
+      <h1>Entrega de exames médicos <span class="text-gradient">100% digital</span></h1>
+      <p class="hero-desc">
+        Diferente de sistemas de saúde tradicionais, a VizuMed é a plataforma SaaS brasileira que digitaliza o fluxo da sua clínica. Da gravação ao paciente em minutos. Laudos, imagens e vídeos entregues automaticamente por WhatsApp e e-mail — sem papel, sem fila, sem perda.
+      </p>
+      
+      <div class="hero-actions">
+        <a href="#demo" class="btn btn-primary">Ver demonstração</a>
+        <a href="#contato" class="btn btn-outline">Falar com especialista</a>
+      </div>
+      
+      <div class="hero-badges text-sec">
+        <span>✓ 100% Online</span>
+        <span>✓ LGPD Compliant</span>
+        <span>✓ Integração WhatsApp</span>
+      </div>
+    </div>
+
+    <div class="hero-mockup-wrapper reveal-on-scroll delay-200">
+      <div class="mockup-main">
+        <div class="mockup-header">
+          <div class="mockup-dot" style="background:#ff5f56;"></div>
+          <div class="mockup-dot" style="background:#ffbd2e;"></div>
+          <div class="mockup-dot" style="background:#27c93f;"></div>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-line"></div>
+          <div class="mockup-line short"></div>
+          <div class="mockup-line" style="margin-top:20px;"></div>
+          <div class="mockup-line"></div>
+        </div>
+        
+        <div class="floating-card c1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          Exame enviado
+        </div>
+        <div class="floating-card c2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          Laudo assinado
+        </div>
+        <div class="floating-card c3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          Paciente notificado
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Social Proof -->
+  <section class="social-proof reveal-on-scroll" aria-label="Prova Social">
+    <div class="container">
+      <p>Utilizado por clínicas e centros de diagnóstico em todo o Brasil</p>
+      <div class="logos-row">
+        <!-- Ícones SVG simulando logos médicos -->
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2l.5-.5m10.5-1.5c1.5-1.26 2-5 2-5s-3.74.5-5 2l-.5.5m-9-3c-1.5-1.26-2-5-2-5s3.74.5 5 2l.5.5m6-1.5c1.5 1.26 2 5 2 5s-3.74-.5-5-2l-.5-.5"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5"><path d="M2 12h5l3-9 5 18 3-9h4"></path></svg>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2" ry="2"></rect><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="8" x2="12" y2="8"></line></svg>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section id="funcionalidades" class="container" aria-label="Funcionalidades da Plataforma">
+    <div class="section-header reveal-on-scroll">
+      <h2>Tudo que sua clínica precisa</h2>
+      <p class="text-sec" style="margin-top: 16px; font-size: 1.1rem;">
+        O sistema VizuMed é projetado para clínicas de ultrassonografia, cardiologia, endoscopia e centros de diagnóstico por imagem que desejam máxima eficiência na entrega de laudos.
+      </p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card reveal-on-scroll delay-100">
+        <div class="feature-icon">📤</div>
+        <h3>Envio Automático</h3>
+        <p>Link do exame enviado por WhatsApp e e-mail assim que o laudo é finalizado pelo profissional.</p>
+      </div>
+      
+      <div class="feature-card reveal-on-scroll delay-200">
+        <div class="feature-icon">🎥</div>
+        <h3>Gravação de Vídeos</h3>
+        <p>Capture procedimentos em vídeo diretamente no sistema, vinculado ao prontuário do exame de imagem.</p>
+      </div>
+      
+      <div class="feature-card reveal-on-scroll delay-300">
+        <div class="feature-icon">📝</div>
+        <h3>Laudos com Assinatura Digital</h3>
+        <p>Crie, edite e assine laudos com interface intuitiva, modelos personalizáveis e total valor jurídico.</p>
+      </div>
+      
+      <div class="feature-card reveal-on-scroll delay-100">
+        <div class="feature-icon">👤</div>
+        <h3>Portal do Paciente</h3>
+        <p>Acesso seguro e exclusivo para o paciente visualizar seus laudos e imagens a qualquer hora, online.</p>
+      </div>
+      
+      <div class="feature-card reveal-on-scroll delay-200">
+        <div class="feature-icon">🩺</div>
+        <h3>Visão do Médico Solicitante</h3>
+        <p>O médico que pediu o exame acessa todos os resultados de seus pacientes através de um painel centralizado.</p>
+      </div>
+      
+      <div class="feature-card reveal-on-scroll delay-300">
+        <div class="feature-icon">💸</div>
+        <h3>Redução de Custos</h3>
+        <p>Elimine custos massivos com impressão, embalagens, filmes radiológicos, envelopes e toda logística física.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="como-funciona" class="container" aria-label="Passo a passo de como funciona">
+    <div class="section-header reveal-on-scroll">
+      <h2>Como funciona</h2>
+      <p class="text-sec" style="margin-top: 16px;">Para centros de endoscopia e diagnóstico, implementamos em três passos eficientes.</p>
+    </div>
+
+    <div class="timeline timeline-progress-anim">
+      <div class="timeline-progress-line"></div>
+      
+      <div class="timeline-step reveal-on-scroll delay-100">
+        <div class="step-number">1</div>
+        <h3>Configure</h3>
+        <p>Parametrize perfis médicos, acesso de equipes e os seus modelos de laudos pré-definidos da instituição.</p>
+      </div>
+      
+      <div class="timeline-step reveal-on-scroll delay-200">
+        <div class="step-number">2</div>
+        <h3>Registre</h3>
+        <p>Grave vídeos, capture imagens de alta resolução, anexe documentos e elabore laudos com assinatura digital instantânea.</p>
+      </div>
+      
+      <div class="timeline-step reveal-on-scroll delay-300">
+        <div class="step-number">3</div>
+        <h3>Entregue</h3>
+        <p>A VizuMed avisa. O paciente recebe o link inteligente por WhatsApp e e-mail. Médico solicitante é notificado via painel completo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section id="comparativo" class="container reveal-on-scroll" aria-label="Comparativo de antes e depois">
+    <div class="section-header">
+      <h2>Antes e Depois</h2>
+      <p class="text-sec" style="margin-top: 16px;">Veja a diferença entre processos antigos e a eficiência do SaaS VizuMed.</p>
+    </div>
+
+    <div class="comparison-container">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Fluxo</th>
+            <th>Processo Tradicional</th>
+            <th>Com VizuMed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Entrega de resultados</td>
+            <td>Impressão física, envelopes</td>
+            <td>Link enviado via WhatsApp e e-mail</td>
+          </tr>
+          <tr>
+            <td>Acesso do paciente</td>
+            <td>Retorno presencial na clínica</td>
+            <td>Portal online disponível 24/7</td>
+          </tr>
+          <tr>
+            <td>Custo por exame</td>
+            <td>Alto (papel fotográfico, impressão)</td>
+            <td>Redução comprovada de até 80%</td>
+          </tr>
+          <tr>
+            <td>Médico solicitante</td>
+            <td>Ligação telefônica ou visita à clínica</td>
+            <td>Painel centralizado online automático</td>
+          </tr>
+          <tr>
+            <td>Laudos</td>
+            <td>Impressos e assinados à caneta</td>
+            <td>Geração digital e assinatura eletrônica (A1/A3)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="container reveal-on-scroll" aria-label="Perguntas Frequentes">
+    <div class="section-header">
+      <h2>Dúvidas Frequentes</h2>
+      <p class="text-sec" style="margin-top: 16px;">Tudo que você precisa saber sobre a implementação da plataforma VizuMed.</p>
+    </div>
+
+    <div class="faq-container">
+      <div class="faq-item">
+        <button class="faq-question">
+          O que é a VizuMed?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p style="padding-top: 10px;">A VizuMed é uma plataforma SaaS brasileira, baseada em Belo Horizonte, que digitaliza a entrega de laudos, imagens e vídeos de exames médicos. Clínicas e hospitais usam o sistema avançado para enviar resultados automaticamente por WhatsApp e e-mail, eliminar impressões físicas caras e oferecer um portal exclusivo web para pacientes e médicos solicitantes.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question">
+          Como funciona o envio de exames pela VizuMed?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p style="padding-top: 10px;">Após a finalização e o registro do exame de imagem no sistema VizuMed, a plataforma gera e envia automaticamente um link criptografado de acesso ao paciente via WhatsApp e e-mail. O paciente acessa o portal com login e senha próprios e visualiza todos os seus laudos, imagens DICOM/JPG e vídeos com total segurança onde quer que esteja.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question">
+          A VizuMed funciona para quais tipos de clínicas?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p style="padding-top: 10px;">Diferente de sistemas não especializados, a VizuMed é rigorosamente ideal para clínicas de diagnóstico por imagem, grandes centros de ultrassonografia, centros avançados de endoscopia, clínicas de cardiologia e qualquer instituição de saúde que realize exames em vídeo/imagem, elabore laudo e necessite garantir a entrega digital aos seus pacientes com excelência.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          A plataforma é segura? Está em conformidade com a LGPD?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p style="padding-top: 10px;">Sim, 100% segura. A VizuMed foi desenvolvida desde o primeiro dia com princípios de 'Privacy by Design'. Todos os dados e exames transitados possuem criptografia avançada. O acesso é feito apenas via autenticação e autenticidade da assinatura digital para garantir a conformidade com a Lei Geral de Proteção de Dados (LGPD) e normativas do Conselho Federal de Medicina (CFM).</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Preciso de alguma instalação ou equipamento especial?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p style="padding-top: 10px;">Não há necessidade de investir em servidores internos super caros. Por ser uma plataforma SaaS que roda diretamente na nuvem (cloud-native), você precisará apenas de computadores padrão, dispositivos de captura atuais (para vídeos) e conexão com a internet. Toda atualização e manutenção de hardware na infraestrutura fica por conta da VizuMed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA & Form -->
+  <section id="demo" class="cta-section" aria-label="Agendar Demonstração">
+    <div class="container cta-container reveal-on-scroll">
+      <h2>Modernize a entrega de exames da sua clínica hoje</h2>
+      <p style="margin-top: 16px; color: var(--color-text-main); font-size: 1.1rem; opacity: 0.9;">Agende uma demonstração gratuita e explore o sistema VizuMed em pleno funcionamento.</p>
+      
+      <form class="cta-form" action="#">
+        <input type="text" name="nome" placeholder="Seu Nome Completo" required>
+        <input type="email" name="email" placeholder="E-mail Profissional" required>
+        <input type="text" name="empresa" placeholder="Nome da Clínica ou Instituição" required>
+        <input type="tel" name="whatsapp" placeholder="Seu WhatsApp (Ex: 31 99999-9999)" required>
+        <button type="submit" class="btn btn-primary">Quero uma demonstração</button>
+      </form>
+      
+      <div class="form-footer">
+        Resposta em até 24h · Sem compromisso · Demo gratuita
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contato" aria-label="Rodapé do site">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="/" class="nav-logo" style="margin-bottom: 0;">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+            VizuMed
+          </a>
+          <p class="footer-desc">Plataforma SaaS consolidada focada na entrega digital e eficiente de laudos e exames para clínicas.</p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#funcionalidades">Funcionalidades</a></li>
+            <li><a href="#como-funciona">Como Funciona</a></li>
+            <li><a href="#comparativo">Para Clínicas</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Plataforma</h4>
+          <ul>
+            <li><a href="https://resultados.vizumed.com.br" target="_blank" rel="noopener">Portal de Resultados</a></li>
+            <li><a href="#demo">Agende uma Demo</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li><span>Belo Horizonte, MG</span></li>
+            <li><span>Brasil</span></li>
+            <li><a href="mailto:contato@vizumed.com.br">contato@vizumed.com.br</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2026 VizuMed. Todos os direitos reservados.</p>
+        <div style="display: flex; gap: 16px;">
+          <!-- Icons de redes sociais ou links uteis -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
