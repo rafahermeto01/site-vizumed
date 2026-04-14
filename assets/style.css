@@ -73,15 +73,14 @@ p  { font-size: clamp(0.95rem, 2.5vw, 1.125rem); }
 }
 
 section {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  margin-bottom: 0;
+  padding-top: 120px !important;
+  padding-bottom: 120px !important;
 }
 
 @media (max-width: 768px) {
   section {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
   }
 }
 
@@ -525,16 +524,124 @@ footer {
     display: none;
   }
   
-  .timeline { flex-direction: column; gap: 32px; padding-left: 24px; }
-  .timeline::before { top: 0; left: 24px; width: 2px; height: 100%; }
-  .timeline-progress-line { top: 0; left: 24px; width: 2px; height: 0%; }
-  .timeline-step { width: 100%; align-items: flex-start; text-align: left; flex-direction: row; gap: 24px; }
-  .step-number { margin-bottom: 0; flex-shrink: 0; width: 40px; height: 40px; position: relative; left: -21px; background: var(--color-bg-card); }
-  
-  .comparison-table {
+  /* CORREÇÃO 1 — TIMELINE "COMO FUNCIONA" NO MOBILE */
+  .timeline-step,
+  .how-it-works-step,
+  [class*="step"] {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 20px 0;
+  }
+
+  .timeline-step .step-number,
+  [class*="step-number"] {
+    margin-bottom: 8px;
+  }
+
+  .timeline-step .step-title,
+  [class*="step-title"] {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .timeline-step .step-description,
+  [class*="step-description"] {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  /* Remove linha horizontal da timeline no mobile */
+  .timeline-progress-line,
+  .timeline-line,
+  [class*="timeline-line"],
+  .timeline::before,
+  .how-it-works::before {
+    display: none;
+  }
+
+  /* Linha vertical substituindo a horizontal */
+  .timeline,
+  .how-it-works-steps {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid #0EA5E9;
+    padding-left: 20px;
+    gap: 32px;
+  }
+
+  /* CORREÇÃO 2 — TABELA COMPARATIVA NO MOBILE */
+  /* Esconde a tabela original */
+  .comparison-table table,
+  table.comparison {
+    display: none;
+  }
+
+  /* Cria visual de cards para cada linha */
+  .comparison-table,
+  .comparison-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .comparison-table tr,
+  .comparison-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #1E293B;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .comparison-table td,
+  .comparison-table th {
     display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    padding: 12px 16px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    word-break: break-word;
+    white-space: normal;
+  }
+
+  /* Coluna "Processo Tradicional" */
+  .comparison-table td:nth-child(2) {
+    background: #0F172A;
+    color: #94A3B8;
+  }
+
+  /* Coluna "Com VizuMed" */
+  .comparison-table td:nth-child(3) {
+    background: #0c2a3a;
+    color: #06B6D4;
+    font-weight: 600;
+  }
+
+  /* Header da tabela */
+  .comparison-table thead {
+    display: none;
+  }
+
+  /* CORREÇÃO 3 — TEXTOS GERAIS NO MOBILE */
+  /* Garante que nenhum texto ultrapasse a tela */
+  p, li, td, th, span, h1, h2, h3, h4 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+  }
+
+  /* Remove overflow horizontal global */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    overflow-x: hidden;
   }
   
   .cta-form {
