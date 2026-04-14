@@ -912,3 +912,53 @@ footer {
     text-align: center;
   }
 }
+
+/* Nova seção de passos: Como funciona */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.step-card {
+  background: #1E293B;
+  border-radius: 16px;
+  padding: 36px 24px;
+  text-align: center;
+  border: 1px solid rgba(14, 165, 233, 0.15);
+}
+
+.step-number {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0EA5E9, #06B6D4);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.step-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #F1F5F9;
+  margin-bottom: 12px;
+}
+
+.step-card p {
+  font-size: 0.95rem;
+  color: #94A3B8;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
