@@ -933,14 +933,24 @@ footer {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #0EA5E9, #06B6D4);
-  color: #fff;
   font-size: 1.25rem;
   font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 0 auto 20px auto;
+}
+
+.step-number,
+.timeline-number,
+.step-circle,
+[class*="step-number"],
+[class*="step-circle"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  line-height: 1 !important;
+  background: linear-gradient(135deg, #0EA5E9, #06B6D4) !important;
+  border: none !important;
+  color: #ffffff !important;
 }
 
 .step-card h3 {
