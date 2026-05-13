@@ -57,10 +57,19 @@ body {
 }
 
 /* Typography */
-h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  line-height: 1.1;
+.hero h1,
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  line-height: 1.15;
   font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .hero h1,
+  .hero-title {
+    font-size: clamp(2.2rem, 9vw, 3rem) !important;
+    line-height: 1.2;
+  }
 }
 
 h2 {
@@ -254,10 +263,12 @@ section {
   max-width: 90%;
 }
 
-.hero-description {
-  max-width: 520px;
-  font-size: 1.125rem;
+.hero-description,
+.hero p,
+.hero-subtitle {
+  font-size: clamp(0.95rem, 3vw, 1.125rem) !important;
   line-height: 1.6;
+  max-width: 540px;
 }
 
 .hero-actions {
@@ -970,5 +981,36 @@ footer {
   .steps-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero,
+  .hero-content,
+  .hero h1,
+  .hero p,
+  .hero-description,
+  .hero-subtitle,
+  .hero-badge,
+  .hero-trust,
+  .hero-buttons,
+  .section-subtitle,
+  .footer-desc {
+    text-align: center !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .hero-buttons {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    width: 100% !important;
+    text-align: center !important;
   }
 }
