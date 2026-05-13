@@ -1099,4 +1099,69 @@ footer {
       text-align: center !important;
     }
   }
+
+  @media only screen and (max-width: 768px) {
+
+    /* ===== HERO ===== */
+    .hero.container,
+    .hero-content {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+
+    span.hero-tag {
+      display: block !important;
+      text-align: center !important;
+      margin: 0 auto 16px auto !important;
+      width: fit-content !important;
+      float: none !important;
+    }
+
+    .hero h1,
+    .hero h1 * {
+      font-size: 2.6rem !important;
+      line-height: 1.15 !important;
+      text-align: center !important;
+    }
+
+    p.hero-desc,
+    p.hero-description {
+      text-align: center !important;
+      margin: 0 auto 24px auto !important;
+      max-width: 100% !important;
+    }
+
+    /* ===== COMO FUNCIONA ===== */
+    #como-funciona .container {
+      text-align: center !important;
+    }
+
+    #como-funciona h2,
+    #como-funciona .section-subtitle {
+      text-align: center !important;
+    }
+
+    .steps-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .step-card {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      width: 100% !important;
+    }
+
+    .step-card h3,
+    .step-card p {
+      text-align: center !important;
+      width: 100% !important;
+    }
+  }
 }
