@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Básico -->
+  <title>VizuMed vs. Outros Sistemas — Qual a diferença?</title>
+  <meta name="description"
+    content="Muitas clínicas comparam a VizuMed com iClinic, Tasy ou PACS. Entenda as diferenças e saiba onde a VizuMed se encaixa no ecossistema de saúde.">
+  <meta name="keywords"
+    content="vizumed vs iclinic, vizumed tasy, vizumed pacs, entrega digital exames, prontuario eletronico vs vizumed">
+
+  <!-- Preload Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/animations.css">
+  
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "VizuMed é um prontuário eletrônico?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não, é uma plataforma especializada em entrega digital de exames."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "VizuMed substitui o iClinic?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não, são sistemas complementares com focos diferentes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "VizuMed é um PACS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não, é uma alternativa mais leve focada na entrega ao paciente."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .comp-header {
+      text-align: center;
+      padding-top: 160px;
+      padding-bottom: 60px;
+    }
+    .comp-header h1 {
+      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      margin-bottom: 24px;
+      color: #fff;
+    }
+    .comp-header p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: var(--color-text-sec);
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+
+    .comp-section {
+      padding: 60px 0;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+    @media (max-width: 900px) {
+      .grid-two {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    .comp-card-not {
+      background: rgba(239, 68, 68, 0.03);
+      border: 1px solid rgba(239, 68, 68, 0.15);
+      border-radius: 16px;
+      padding: 40px;
+    }
+    .comp-card-not h2 {
+      color: #EF4444;
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .comp-card-not ul {
+      list-style: none;
+    }
+    .comp-card-not li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 20px;
+      color: var(--color-text-sec);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    .comp-card-not li::before {
+      content: "❌";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      font-size: 0.95rem;
+    }
+    .comp-card-not strong {
+      color: #fff;
+    }
+
+    .comp-card-is {
+      background: rgba(14, 165, 233, 0.03);
+      border: 1px solid rgba(14, 165, 233, 0.15);
+      border-radius: 16px;
+      padding: 40px;
+    }
+    .comp-card-is h2 {
+      color: var(--color-primary);
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .comp-card-is p {
+      color: var(--color-text-main);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .exclusives-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 600px) {
+      .exclusives-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .exclusive-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.95rem;
+      color: var(--color-text-sec);
+      line-height: 1.5;
+    }
+    .exclusive-item span {
+      color: var(--color-primary);
+      font-weight: bold;
+    }
+
+    /* Comparison Table Styles */
+    .table-section {
+      background: rgba(30, 41, 59, 0.3);
+      border-radius: 20px;
+      padding: 40px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 60px;
+    }
+    .table-section h2 {
+      text-align: center;
+      margin-bottom: 32px;
+      font-size: 1.75rem;
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+    .custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    .custom-table th,
+    .custom-table td {
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.95rem;
+    }
+    .custom-table th {
+      background: rgba(255, 255, 255, 0.02);
+      font-weight: 600;
+    }
+    .custom-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    /* Highlight Column 2 (VizuMed) */
+    .custom-table th:nth-child(2) {
+      color: var(--color-primary);
+      background: rgba(14, 165, 233, 0.08);
+      font-weight: 700;
+      border-left: 1px solid rgba(14, 165, 233, 0.2);
+      border-right: 1px solid rgba(14, 165, 233, 0.2);
+      text-align: center;
+    }
+    .custom-table td:nth-child(2) {
+      color: #fff;
+      font-weight: 600;
+      background: rgba(14, 165, 233, 0.04);
+      border-left: 1px solid rgba(14, 165, 233, 0.2);
+      border-right: 1px solid rgba(14, 165, 233, 0.2);
+      text-align: center;
+    }
+
+    .custom-table td:nth-child(3),
+    .custom-table td:nth-child(4) {
+      color: var(--color-text-sec);
+      text-align: center;
+    }
+    .custom-table th:nth-child(3),
+    .custom-table th:nth-child(4) {
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      .custom-table {
+        min-width: 680px;
+      }
+      .table-section {
+        padding: 20px;
+      }
+    }
+
+    .for-whom {
+      background: var(--glass-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .for-whom h2 {
+      margin-bottom: 20px;
+      color: #fff;
+      font-size: 1.6rem;
+    }
+    .for-whom p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: var(--color-text-sec);
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .cta-mini {
+      text-align: center;
+      padding: 60px 0;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, rgba(15, 23, 42, 0) 75%);
+      border-radius: 20px;
+      border: 1px solid rgba(14, 165, 233, 0.1);
+    }
+    .cta-mini h3 {
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" aria-label="Navegação Principal">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
+        <img src="assets/logo.png" alt="VizuMed" height="36" width="36" style="display:block; object-fit:contain;">
+        <span style="font-weight:700; color:white; font-size:1.1rem;">Vizu<span
+            style="font-weight:300;">Med</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#funcionalidades">Funcionalidades</a></li>
+        <li><a href="index.html#como-funciona">Como Funciona</a></li>
+        <li><a href="index.html#comparativo">Para Clínicas</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="comparacao.html">Comparação</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+        <li><a href="index.html#demo" class="btn btn-accent">Agendar Demo</a></li>
+      </ul>
+
+      <button class="hamburger" aria-label="Abrir menu">
+        ☰
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+    
+    <!-- Header -->
+    <header class="comp-header">
+      <span class="hero-tag" style="margin-bottom: 16px;">VizuMed vs. Outros Sistemas</span>
+      <h1>Qual a diferença?</h1>
+      <p>
+        Muitas clínicas chegam até a VizuMed depois de pesquisar sistemas como iClinic, Tasy ou Pixeon. A confusão é compreensível — todos são sistemas de saúde — mas resolvem problemas muito diferentes. Esta página explica claramente onde a VizuMed se encaixa.
+      </p>
+    </header>
+
+    <!-- Sections 1 & 2 -->
+    <section class="grid-two">
+      
+      <!-- O que NÃO é -->
+      <div class="comp-card-not">
+        <h2>O que a VizuMed NÃO é</h2>
+        <ul>
+          <li><strong>Não é um prontuário eletrônico:</strong> não gerencia consultas, agendamentos ou histórico clínico completo.</li>
+          <li><strong>Não é um sistema PACS completo:</strong> não armazena imagens DICOM em larga escala para hospitais.</li>
+          <li><strong>Não é um sistema de gestão hospitalar:</strong> não fatura, não gerencia leitos, não controla estoque.</li>
+        </ul>
+      </div>
+
+      <!-- O que É -->
+      <div class="comp-card-is">
+        <h2>O que a VizuMed É</h2>
+        <p>
+          A VizuMed é especialista em uma coisa: garantir que o resultado do exame chegue ao paciente de forma digital, rápida e segura. Do procedimento ao celular do paciente, em minutos.
+        </p>
+        
+        <div class="exclusives-grid">
+          <div class="exclusive-item">
+            <span>🎥</span> Gravação de vídeos do procedimento vinculada ao laudo
+          </div>
+          <div class="exclusive-item">
+            <span>📤</span> Envio automático por WhatsApp e e-mail
+          </div>
+          <div class="exclusive-item">
+            <span>👤</span> Portal exclusivo para o paciente acessar 24/7
+          </div>
+          <div class="exclusive-item">
+            <span>📝</span> Assinatura digital de laudos (A1/A3)
+          </div>
+          <div class="exclusive-item">
+            <span>🩺</span> Painel para o médico solicitante
+          </div>
+          <div class="exclusive-item">
+            <span>🌐</span> Sem instalação, sem servidor, 100% web
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Comparative Table Section -->
+    <section class="table-section">
+      <h2>Comparativo Detalhado</h2>
+      <div class="table-wrapper">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Funcionalidade</th>
+              <th>VizuMed</th>
+              <th>iClinic/Tasy</th>
+              <th>PACS Tradicional</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Entrega digital por WhatsApp</td>
+              <td>✅ Sim</td>
+              <td>❌ Não</td>
+              <td>❌ Não</td>
+            </tr>
+            <tr>
+              <td>Portal do paciente</td>
+              <td>✅ Sim</td>
+              <td>Parcial</td>
+              <td>Parcial</td>
+            </tr>
+            <tr>
+              <td>Gravação de vídeos</td>
+              <td>✅ Sim</td>
+              <td>❌ Não</td>
+              <td>❌ Não</td>
+            </tr>
+            <tr>
+              <td>Assinatura digital de laudos</td>
+              <td>✅ Sim</td>
+              <td>❌ Não</td>
+              <td>Parcial</td>
+            </tr>
+            <tr>
+              <td>Prontuário eletrônico</td>
+              <td>❌ Não</td>
+              <td>✅ Sim</td>
+              <td>❌ Não</td>
+            </tr>
+            <tr>
+              <td>Gestão de agendamentos</td>
+              <td>❌ Não</td>
+              <td>✅ Sim</td>
+              <td>❌ Não</td>
+            </tr>
+            <tr>
+              <td>Armazenamento DICOM</td>
+              <td>❌ Não</td>
+              <td>❌ Não</td>
+              <td>✅ Sim</td>
+            </tr>
+            <tr>
+              <td>Preço acessível para clínicas</td>
+              <td>✅ Sim</td>
+              <td>Médio</td>
+              <td>Alto</td>
+            </tr>
+            <tr>
+              <td>Sem instalação</td>
+              <td>✅ Sim</td>
+              <td>Parcial</td>
+              <td>❌ Não</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Para quem é -->
+    <section class="for-whom">
+      <h2>Para quem é a VizuMed</h2>
+      <p>
+        Se você já tem um sistema de gestão e precisa modernizar a entrega de exames, a VizuMed é o complemento ideal. Se você ainda não tem nenhum sistema e precisa de um prontuário completo, recomendamos avaliar as duas necessidades separadamente.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-mini">
+      <h3>Quer ver como funciona na prática?</h3>
+      <a href="index.html#demo" class="btn btn-primary">Agendar demonstração gratuita</a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="contato" aria-label="Rodapé do site">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="nav-logo"
+            style="display:flex; align-items:center; gap:10px; text-decoration:none; margin-bottom:0;">
+            <img src="assets/logo.png" alt="VizuMed" height="36" width="36" style="display:block; object-fit:contain;">
+            <span style="font-weight:700; color:white; font-size:1.1rem;">Vizu<span
+                style="font-weight:300;">Med</span></span>
+          </a>
+          <p class="footer-desc">Plataforma SaaS consolidada focada na entrega digital e eficiente de laudos e exames
+            para clínicas.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html#funcionalidades">Funcionalidades</a></li>
+            <li><a href="index.html#como-funciona">Como Funciona</a></li>
+            <li><a href="index.html#comparativo">Para Clínicas</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="comparacao.html">Comparação</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Plataforma</h4>
+          <ul>
+            <li><a href="https://resultados.vizumed.com.br" target="_blank" rel="noopener">Portal de Resultados</a></li>
+            <li><a href="index.html#demo">Agende uma Demo</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li><span>Belo Horizonte, MG</span></li>
+            <li><span>Brasil</span></li>
+            <li><a href="mailto:contato@vizumed.com.br">contato@vizumed.com.br</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 VizuMed. Todos os direitos reservados.</p>
+        <div style="display: flex; gap: 16px;">
+          <!-- Icons de redes sociais ou links uteis -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+
+</html>
